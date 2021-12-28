@@ -1,0 +1,89 @@
+html,body{
+  height:100%;
+}
+.App {
+  text-align: center;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg);
+  -webkit-animation: backgroundScroll 20s linear infinite;
+  animation: backgroundScroll 20s linear infinite;
+  background-size: auto 100%;
+    
+    background-position: left top;
+  }
+  
+  @-webkit-keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -400px 0;}
+  }
+          
+  @keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -400px 0;}
+  }
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.filter {
+  width: 80%;
+  display: flex;
+  margin: 0 10px;
+}
+.movieList { 
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: center;
+column-gap: 5%;
+}
+
+.fa-star{
+  color:gold;
+}
+img.card-img-top {
+  height: 300px;
+}
+p.card-text {
+  height: 100px;
+  overflow: hidden;
+}
+.card{
+  height: 500px;
+    margin: 20px auto;
+}
+.card-body{
+  padding: 5px!important;
+}
+.rating{
+  width: 100%;
+}
