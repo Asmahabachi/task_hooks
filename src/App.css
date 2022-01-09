@@ -65,6 +65,7 @@ html,body{
   align-content: flex-end;
   justify-content: center;
 column-gap: 5%;
+
 }
 
 .fa-star{
@@ -78,7 +79,7 @@ p.card-text {
   overflow: hidden;
 }
 .card{
-  height: 500px;
+  height: 470px;
     margin: 20px auto;
 }
 .card-body{

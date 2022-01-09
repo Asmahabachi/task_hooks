@@ -5,21 +5,29 @@ import Add from './components/Add';
 import MovieList from './components/MovieList';
 import {movies} from './components/movies'
 import{useState} from 'react';
+import Details from './components/Details';
+import {Switch , Route } from 'react-router-dom'
 
 // console.log(movies);
 
 function App() {
 
 
- const [movieList,setmovielist] =useState(movies)
+ const [movieList,setMvielist] =useState(movies)
+ const movieHandler = (newMovie) => {
+  setMvielist([...movieList,newMovie])
+ }
  console.log(movieList);
  
   return (
     <div className="App">
       <Navbar />
-      <Add/>
-      <MovieList movieList={movieList} />
-      
+      <Switch>
+      <Route path="/Add" render={(props)=> <Add movieHandler={movieHandler}/>}></Route> 
+      <Route path="/" exact render={(props)=> <MovieList movieList={movieList} />}></Route> 
+      <Route path="/Details/:id" render={(props)=> <Details {...props} Liste={movieList} />}></Route> 
+      </Switch>
+      <Filter/>
     </div>
   );
 }
